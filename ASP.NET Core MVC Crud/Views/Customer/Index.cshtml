@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Customers>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer List</h2>
+<div>
+    @Html.ActionLink("Add New", "Add", "Customer")
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerID</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Phone</td>
+                <td>@item.Email</td>
+                <td>@Html.ActionLink("Edit", "Edit", "Customer", new { id = item.CustomerID })</td>
+                <td><a onclick="DeleteSave('@item.CustomerID.ToString()');" href="javascript:void(0)">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts {
+    <script src="~/js/customer.min.js" asp-append-version="true"></script>
+}
+

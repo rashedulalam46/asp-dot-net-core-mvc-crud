@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add New</h2>
+<div>
+    @Html.ActionLink("<< Back", "Index", "Customer")
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group margin-top-10">
+            <label>First Name*</label>
+            <input id="FirstName" class="form-control req" type="text" value="" maxlength="50">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group margin-top-10">
+            <label>Last Name*</label>
+            <input id="LastName" class="form-control req" type="text" value="" maxlength="50">
+        </div>
+    </div>   
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group margin-top-10">
+            <label>Phone</label>
+            <input id="Phone" class="form-control" type="text" value="" maxlength="20">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group margin-top-10">
+            <label>Email</label>
+            <input id="Email" class="form-control" type="text" value="" maxlength="100">
+        </div>
+    </div>    
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <input id="saveCust" type="button" value="Save" class="btn btn-primary" />
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/js/customer.min.js" asp-append-version="true"></script>
+}
+
