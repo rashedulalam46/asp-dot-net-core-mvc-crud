@@ -1,2 +1,2 @@
 # asp-dot-net-core-mvc-crud
-ASP.NET Core MVC - Student CRUD App
+ASP.NET Core MVC - Customer CRUD App
