@@ -1,0 +1,29 @@
+﻿USE [TestDB]
+GO
+/****** Object:  Table [dbo].[Customers]    Script Date: 6/29/2021 9:28:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customers](
+	[CustomerID] [int] NOT NULL,
+	[FirstName] [nvarchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[Phone] [nvarchar](20) NULL,
+	[Email] [nvarchar](100) NULL,
+	[InsertDate] [datetime] NULL,
+	[InsertedBy] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+(
+	[CustomerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [Phone], [Email], [InsertDate], [InsertedBy]) VALUES (295, N'John', N'Abrar', N'0171234567', N'john@gmail.com', CAST(N'2019-10-20T16:16:41.053' AS DateTime), N'ADMIN')
+GO
+INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [Phone], [Email], [InsertDate], [InsertedBy]) VALUES (562, N'Leo', N'Messi', N'0171234568', N'messi@gmail.com', CAST(N'2021-06-29T20:32:55.377' AS DateTime), N'ADMIN')
+GO
+INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [Phone], [Email], [InsertDate], [InsertedBy]) VALUES (691, N'Hasan', N'Khan', N'0171234569', N'hasan@gmail.com', CAST(N'2019-10-20T17:07:11.690' AS DateTime), N'ADMIN')
+GO
+INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [Phone], [Email], [InsertDate], [InsertedBy]) VALUES (861, N'Sumon', N'Sarkar', N'0171234565', N'sarkar@gmai.com', CAST(N'2019-10-20T17:37:53.677' AS DateTime), N'ADMIN')
+GO
