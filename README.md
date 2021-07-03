@@ -3,4 +3,4 @@ This is a simple CRUD application using ASP.Net Core, Entity Framework Core, and
 ## Database
 Create a database (TestDb). Run the SQL scrip from the database directory
 ## How to Run
-Download the application. Change the connection string credential of appsettings file, based on your SQL server credential. Build and run the application.
+Download the application. Change the connection string credential from the appsettings file, based on your SQL server credential. Build and run the application.
