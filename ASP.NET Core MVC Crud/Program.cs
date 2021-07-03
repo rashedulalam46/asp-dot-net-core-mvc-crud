@@ -20,6 +20,7 @@ namespace ASP.NET_Core_MVC_Crud
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://*:44353");
                     webBuilder.UseStartup<Startup>();
                 });
     }
